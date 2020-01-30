@@ -112,26 +112,18 @@
 		</article>
 	
 		<footer>
-			<ul class="nav nav-pills fixed-bottom nav-justified">
-				<li class="nav-item">
-					<a class="nav-link" href="#post"><i class="fas fa-newspaper fa-2x"></i><br> <span style="font-size: 10px;">公告</span>  </a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#course">課程</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">活動</a>
-				</li>	
-				<li class="nav-item">
-					<a class="nav-link" href="#">社區服務</a>
-				</li>	
-			</ul>
+			<div class="btn-group fixed-bottom ">
+				<button class="btn"><i class="fas fa-newspaper fa-2x"></i><br><span  style="font-size: 10px;">公告</span></button>
+				<button class="btn">課程</button>
+				<button class="btn">活動</button>
+				<button class="btn">社區服務</button>
+			</div>
 		</footer>
 	</div>
 	<script>
 		$(document).ready(function(){
-			$("a.nav-link").click(function(){
-				$(this).toggleClass("active");
+			$(".btn").click(function(){
+				$(this).addClass("btn-primary").siblings().removeClass('btn-primary');
 			});
 		});
 	</script>
